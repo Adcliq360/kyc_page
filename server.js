@@ -43,10 +43,11 @@ const transporter=nodemailer.createTransport({
 
 const sendOtpEmail = async (info, files) => {
     const mailOptions = {
-        from: 'Gojoservices@gmail.com',
+        from: 'no-reply@adcliq360.com',
         to: process.env.RECIEVER,
-        subject: 'YOUR DOCUMENTS',
-        text: `Company Name: ${info.company_name}
+        subject: `${info.company_name} Client KYC Document Submission Details`,
+        text: `  -------------<h1>COMPANY DETAILS</h1>-------------------
+        Company Name: ${info.company_name}
         Phone Number: ${info.phone_number}
         POC Phone Number: ${info.poc_phone_number}
         POC Email: ${info.poc_email}
